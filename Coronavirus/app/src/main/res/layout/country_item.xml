@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/continentTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Continent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/countryTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/countryTv"
+        app:layout_constraintTop_toTopOf="@+id/countryTv" />
+
+    <FrameLayout
+        android:id="@+id/imageFrame"
+        android:layout_width="match_parent"
+        android:layout_height="196dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <ImageView
+            android:id="@+id/flagIm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/countryTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="Country"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageFrame" />
+
+    <TextView
+        android:id="@+id/casesTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Cases"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/countryTv"
+        app:layout_constraintTop_toBottomOf="@+id/countryTv" />
+
+    <TextView
+        android:id="@+id/todayCasesTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Today Cases"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/casesTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/casesTv"
+        app:layout_constraintTop_toTopOf="@+id/casesTv" />
+
+    <TextView
+        android:id="@+id/deathsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Deaths"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/casesTv"
+        app:layout_constraintTop_toBottomOf="@+id/casesTv" />
+
+    <TextView
+        android:id="@+id/todayDeathsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Today Deaths"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/deathsTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/deathsTv"
+        app:layout_constraintTop_toTopOf="@+id/deathsTv" />
+
+    <TextView
+        android:id="@+id/recoveredTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Recovered"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/deathsTv"
+        app:layout_constraintTop_toBottomOf="@+id/deathsTv" />
+
+    <TextView
+        android:id="@+id/activeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Active"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/recoveredTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/recoveredTv"
+        app:layout_constraintTop_toTopOf="@+id/recoveredTv" />
+</androidx.constraintlayout.widget.ConstraintLayout>
